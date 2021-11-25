@@ -6,7 +6,7 @@ const projects = [
       todos: [
         {
           id: 1,
-          title: 'Todo 1 -p1',
+          title: 'Todo 1 - p1',
           completed: false,
           date: new Date(),
           priority: 'low'
