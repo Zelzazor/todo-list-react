@@ -11,7 +11,7 @@ function ProjectSideBar(props) {
                 <button className="btn-aside" id="btnAddProject">Add Project...</button>
                 <button className="btn-aside hidden" id="btnBackProject">Back</button>
             </div>
-            <ProjectList projects={props.projects}/>
+            <ProjectList projects={props.projects} onSelectedProject={props.onSelectedProject}/>
         </aside>
     );
 }

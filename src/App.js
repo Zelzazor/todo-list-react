@@ -1,30 +1,20 @@
 import './App.css';
 import ProjectSideBar from './components/ProjectSideBar';
 import MainSide from './components/MainSide';
+import projects from './data/projects';
+import {useState} from 'react';
 
 function App() {
-  const projects = [
-    {
-      id: 1,
-      title: 'Project 1',
-      description: 'This is project 1',
-    },
-    {
-      id: 2,
-      title: 'Project 2',
-      description: 'This is project 2',
-    },
-    {
-      id: 3,
-      title: 'Project 3',
-      description: 'This is project 3',
-    }
-  ];
 
+  const [project, setProject] = useState(projects[0]);
+
+  const onSelectedProject = (project) => {
+    setProject(project);
+  }
   return (
     <main className="container">
-        <ProjectSideBar projects={projects}/>
-        <MainSide />
+        <ProjectSideBar projects={projects} onSelectedProject={onSelectedProject}/>
+        <MainSide project={project}/>
     </main>
   );
 }

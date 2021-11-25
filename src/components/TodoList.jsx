@@ -1,11 +1,9 @@
 import Todo from './Todo';
 
-function TodoList() {
+function TodoList(props) {
     return (
         <section className="todos">
-            <Todo />
-            <Todo />
-            <Todo />
+            {props.todos.map(todo => <Todo key={todo.id} {...todo} />)}
         </section>
     );
 }
