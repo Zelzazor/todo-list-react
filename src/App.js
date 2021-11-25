@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import ProjectSideBar from './components/ProjectSideBar';
+import MainSide from './components/MainSide';
 
 function App() {
+  const projects = [
+    {
+      id: 1,
+      title: 'Project 1',
+      description: 'This is project 1',
+    },
+    {
+      id: 2,
+      title: 'Project 2',
+      description: 'This is project 2',
+    },
+    {
+      id: 3,
+      title: 'Project 3',
+      description: 'This is project 3',
+    }
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="container">
+        <ProjectSideBar projects={projects}/>
+        <MainSide />
+    </main>
   );
 }
 
