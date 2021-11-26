@@ -15,7 +15,7 @@ function TodoForm(props) {
         }
         project.todos = [...project.todos, newTodo];
         editProject(project);
-
+        setTxtTodo("");
     }
   return (
     <div className="bar">

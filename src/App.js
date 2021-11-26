@@ -3,15 +3,25 @@ import ProjectSideBar from './components/ProjectSideBar';
 import MainSide from './components/MainSide';
 import projects from './data/projects';
 import {useState} from 'react';
+import {useUpdateEffect} from './hooks/useUpdateEffect'
+
 
 function App() {
 
-  const [project, setProject] = useState(projects[0]);
   const [projectlist, setProjectList] = useState(projects);
+  const [projectlistlength, setProjectListLength] = useState(projectlist.length);
+  const [project, setProject] = useState(undefined);
 
   const onSelectedProject = (project) => {
     setProject(project);
   }
+
+  useUpdateEffect(()=>{
+    if(projectlist.length < projectlistlength){
+      setProject(projectlist[0]);
+    }
+    setProjectListLength(projectlist.length);
+  }, [projectlist]);
 
   const addProject = (project) => {
     project.id = projectlist.length + 1;

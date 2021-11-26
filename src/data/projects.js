@@ -1,12 +1,12 @@
 const projects = [
     {
       id: 1,
-      title: 'Project 1',
-      description: 'This is project 1',
+      title: 'Actividades de INTEC',
+      description: 'Aquí pondré las actividades de INTEC',
       todos: [
         {
           id: 1,
-          title: 'Todo 1 - p1',
+          title: 'Tarea de Aseguramiento',
           completed: true,
           date: new Date(),
           priority: 'low'
@@ -15,12 +15,12 @@ const projects = [
     },
     {
       id: 2,
-      title: 'Project 2',
-      description: 'This is project 2',
+      title: 'Actividades del trabajo',
+      description: 'Aquí pondré las actividades del trabajo',
       todos: [
         {
           id: 1,
-          title: 'Todo 1 - p2',
+          title: 'Entregar componentes',
           completed: false,
           date: new Date(),
           priority: 'medium'
@@ -29,12 +29,12 @@ const projects = [
     },
     {
       id: 3,
-      title: 'Project 3',
-      description: 'This is project 3',
+      title: 'Actividades del hogar',
+      description: 'Aquí pondré las actividades del hogar',
       todos: [
         {
           id: 1,
-          title: 'Todo 1 - p3',
+          title: 'Cocinar omelette con queso',
           completed: false,
           date: new Date(),
           priority: 'high'
