@@ -3,7 +3,7 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import {faTrashAlt} from '@fortawesome/free-solid-svg-icons';
 
 function Todo(props){
-    const {title, date, priority} = props;
+    const {title, date, priority, completed} = props;
     let classPriority = "";
 
 
@@ -20,13 +20,14 @@ function Todo(props){
                 <p className="todo-title">{title}</p>
                 <p className="todo-date">{date.toString()}</p>
             </div>
-            <div className="todo-buttons">
+            <div className="todo-btns">
                 <button id="btnEditarToDo">
                     <FontAwesomeIcon icon={faEdit} />
                 </button>
                 <button id="btnBorrarToDo">
                     <FontAwesomeIcon icon={faTrashAlt}/>
                 </button>
+                <input type="checkbox" checked={completed} onChange={()=>""}/>
             </div>
         </div>
     );

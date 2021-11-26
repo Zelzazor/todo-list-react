@@ -7,7 +7,7 @@ const projects = [
         {
           id: 1,
           title: 'Todo 1 - p1',
-          completed: false,
+          completed: true,
           date: new Date(),
           priority: 'low'
         },

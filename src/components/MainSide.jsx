@@ -2,7 +2,7 @@ import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
 
 function MainSide(props) {
-  const project = props.project;
+  const {project, editProject} = props;
 
   return project?(
     <div className="other-side">
@@ -14,7 +14,7 @@ function MainSide(props) {
           </div>
         </header>
         <TodoList todos={project.todos}/>
-        <TodoForm  />
+        <TodoForm project={project} editProject={editProject}/>
     </div>
     ):"";
 }

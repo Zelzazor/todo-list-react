@@ -14,21 +14,12 @@ function ProjectForm(props) {
     }
   }
 
-  const handleChange = (e) => {
-    if (e.target.name === 'title') {
-        setTitle(e.target.value);
-    } else if (e.target.name === 'description') {
-        setDescription(e.target.value);
-    }
-
-}
-
   return (
       <div className="form-add">
           <label htmlFor="txtTitle">Title:</label>
-          <input type="text" name="title" onChange={handleChange} id="txtTitle" />
+          <input type="text" name="title" value={title} onChange={(e)=> setTitle(e.target.value)} id="txtTitle" />
           <label htmlFor="txtDesc">Description:</label>
-          <input type="text" name="description" onChange={handleChange} id="txtDesc"/>
+          <input type="text" name="description" value={description} onChange={(e)=>setDescription(e.target.value)} id="txtDesc"/>
           <button className="btn-aside" onClick={handleSubmit}>Create</button>
       </div>
   );
